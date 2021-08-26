@@ -1,1 +1,1 @@
-
+Email at shankhanilm@iisc.ac.in for pre-trained spatial and temporal model for generating nr-sted index for videos.
