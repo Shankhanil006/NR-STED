@@ -45,11 +45,12 @@ from argparse import ArgumentParser
 
 K.clear_session()
 
-
-################################## KONVID ###########################################
+# The following code can be used to estimate the NR-STED index of a video. For videos in YUV420 format please specify the video width and height.
+#The link to spatial and temporal models are provided in readme.md file
+#############################################################################
 resnet_model   = ResNet50(include_top=False, weights='imagenet', input_shape=None, input_tensor=None, pooling='avg')
-spatial_model  = '../models/spatial_model.h5'
-temporal_model = '../models/temporal_model.h5'
+spatial_model  = '../spatial_model.h5'
+temporal_model = '../temporal_model.h5'
 
 path_to_video = ''
 
