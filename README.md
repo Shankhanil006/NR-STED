@@ -23,4 +23,5 @@ allvs1_temporal_rred.py train the temporal learning model from scrath for given 
 ## **Prediction**:
 Overall NR-STED index of videos are predicted using test_st_rredmap_framelvl.py. Where trained temporal_rred model and spatial_rred prediction are taken as input.
 
-
+## ** Pre-trained Spatial Model**:
+[Drive link](https://drive.google.com/file/d/1nssTD1MwD-C9JZavjfZ68fDhqXvKqP66/view?usp=sharing)
