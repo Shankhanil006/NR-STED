@@ -4,10 +4,7 @@ Description:
 This work implements “Predicting Spatio-Temporal Entropic Differences for
 Robust No Reference Video Quality Assessment” in keras/tensorflow. If you are using the codes, cite the following article:
 
-	S. Mitra, R. Soundararajan, and S. S. Channappayya, “Predicting Spatio-
-Temporal Entropic Differences for Robust No Reference Video Quality
-Assessment,” IEEE Signal Processing Letters, vol. 28, pp. 170–174,
-2021.
+S. Mitra, R. Soundararajan, and S. S. Channappayya, “Predicting Spatio-Temporal Entropic Differences for Robust No Reference Video Quality Assessment,” IEEE Signal Processing Letters, vol. 28, pp. 170–174, 2021.
  
 
 ResNet Feature Extraction: We use the function feature_generate_resnet50.py to produce spatially aware quality feature using pre-trained ResNet50 keras weights.
