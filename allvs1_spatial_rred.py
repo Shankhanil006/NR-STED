@@ -48,6 +48,7 @@ K.clear_session()
 #########################################################################################################    
 spatial_feat_dir  = '../resnet50_feat/'
 strred_directory = '../strred_files/'
+path_to_videos = ''
 all_train_dbs = ['epfl_4cif', 'epfl_cif','live', 'ecvq', 'csiq', 'evvq']
 all_test_dbs = ['mobile']
 
@@ -57,7 +58,7 @@ live_resnet = []
 live_ssim = []
 live_mse = []
 
-live_directory = '/media/ece/DATA/Shankhanil/VQA/live_vqa/'
+live_directory = path_to_videos + 'live_vqa/'
 with open(live_directory + 'live_video_quality_seqs.txt') as f:
     video_names = f.readlines()
 live_video_list = [x.strip('.yuv\n') for x in video_names] 
@@ -87,7 +88,7 @@ epfl_4cif_ssim = []
 epfl_4cif_mse = []
 
 
-epfl_4cif_directory = '/media/ece/DATA/Shankhanil/VQA/epfl_vqeg_video/online_DB/decoded/4CIF/'
+epfl_4cif_directory = path_to_videos + 'epfl_vqeg_video/online_DB/decoded/4CIF/'
 with open(epfl_4cif_directory + 'names_scores.txt') as f:
     file_names = f.readlines()
 epfl_4cif_video_list = [x.split()[0] for x in file_names] 
@@ -115,7 +116,7 @@ epfl_cif_resnet = []
 epfl_cif_ssim = []
 epfl_cif_mse = []
 
-epfl_cif_directory = '/media/ece/DATA/Shankhanil/VQA/epfl_vqeg_video/online_DB/decoded/CIF/'
+epfl_cif_directory = path_to_videos + 'epfl_vqeg_video/online_DB/decoded/CIF/'
 with open(epfl_cif_directory + 'names_scores.txt') as f:
     file_names = f.readlines()
 epfl_cif_video_list = [x.split()[0] for x in file_names] 
@@ -143,7 +144,7 @@ mobile_resnet = []
 mobile_ssim = []
 mobile_mse = []
 
-mobile_directory = '/media/ece/DATA/Shankhanil/VQA/live_mobile/'
+mobile_directory = path_to_videos + 'live_mobile/'
 mobile_dmos = sio.loadmat(strred_directory + 'dmos_live_mobile.mat')['dmos'].squeeze()
 
 mobile_s_rred = sio.loadmat(strred_directory + 'strred_mobile.mat')['srred'].squeeze()
@@ -165,7 +166,7 @@ csiq_resnet = []
 csiq_ssim = []
 csiq_mse = []
 
-csiq_directory = '/media/ece/DATA/Shankhanil/VQA/CSIQ/csiq_videos/'
+csiq_directory = path_to_videos + 'CSIQ/csiq_videos/'
 with open(csiq_directory + 'video_subj_ratings.txt') as f:
     file_names = f.readlines()
 csiq_video_list = [x.split('\t')[0].split('.')[0] for x in file_names] 
@@ -195,7 +196,7 @@ ecvq_resnet = []
 ecvq_ssim = []
 ecvq_mse = []
 
-ecvq_directory = '/media/ece/DATA/Shankhanil/VQA/ECVQ/cif_videos/'
+ecvq_directory = path_to_videos + 'ECVQ/cif_videos/'
 with open(ecvq_directory + 'subjective_scores_cif.txt') as f:
     file_names = f.readlines()
 ecvq_video_list = [x.split()[0] for x in file_names] 
@@ -220,7 +221,7 @@ evvq_resnet = []
 evvq_ssim = []
 evvq_mse = []
 
-evvq_directory = '/media/ece/DATA/Shankhanil/VQA/EVVQ/vga_videos/'
+evvq_directory = path_to_videos + 'EVVQ/vga_videos/'
 with open(evvq_directory + 'subjective_scores_vga.txt') as f:
     file_names = f.readlines()
 evvq_video_list = [x.split()[0] for x in file_names] 
