@@ -1,6 +1,4 @@
 # NR-STED
-## Description:
-
 This work implements “Predicting Spatio-Temporal Entropic Differences for
 Robust No Reference Video Quality Assessment” in keras/tensorflow. If you are using the codes, cite the following article:
 
